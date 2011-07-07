@@ -9,7 +9,7 @@
 <% content_for(:center_middle) do %>
 
 	<%= form_tag(sessions_path, :method => :post) do %>
-		Email:    <%= text_field_tag "email" %>
+		Username:    <%= text_field_tag "email" %>
 		Password: <%= password_field_tag "password" %>
 		<%= submit_tag "Sign In" %>
 	<% end %>
