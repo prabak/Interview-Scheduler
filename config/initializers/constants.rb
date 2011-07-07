@@ -1,0 +1,6 @@
+module Constants
+  
+  SCHEDULE_TYPE_MARKETING = 1
+  SCHEDULE_TYPE_FRONT_END = 2
+  
+end

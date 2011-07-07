@@ -1,0 +1,38 @@
+<% content_for(:sidebar) do %>
+	<%= link_to("Log out", logout_path) %>
+<% end %>
+
+<% content_for(:center_top) do %>
+	<h1>Available Schedules!</h1>
+  	<h2>Book your slot!</h2>
+	<br clear="all"><br clear="all">
+<% end %>
+
+<% content_for(:center_middle) do %>
+	</br>
+	<table>
+		<th>Date</th>
+		<th>Status</th>
+		<% @schedules.each do |schedule| %>
+			<tr>
+				<td><%=schedule.interview_date.strftime("%B %d %Y @ %I:%M %P")%></td>
+				<td>
+					<% if schedule.available %>
+						<%= link_to "Book this slot", appointment_path(schedule), :method => :put %>
+					<% else %>
+						<% if current_user.schedule_id == schedule.id %>
+							<span style="color:red">You have reserved this slot</span>
+						<% else %>
+							Taken by someone
+						<% end %>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+	
+<% end %>
+
+<% content_for(:center_bottom) do %>
+<% end %>
+

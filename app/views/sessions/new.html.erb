@@ -1,0 +1,21 @@
+<% content_for(:sidebar) do %>
+<% end %>
+
+<% content_for(:center_top) do %>
+	<h1>Welcome!</h1>
+  	<h2>Sing in to book your interview!</h2>
+<% end %>
+
+<% content_for(:center_middle) do %>
+
+	<%= form_tag(sessions_path, :method => :post) do %>
+		Email:    <%= text_field_tag "email" %>
+		Password: <%= password_field_tag "password" %>
+		<%= submit_tag "Sign In" %>
+	<% end %>
+	
+<% end %>
+
+<% content_for(:center_bottom) do %>
+<% end %>
+
