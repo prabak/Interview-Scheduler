@@ -10,7 +10,9 @@
 
 	<%= form_tag(sessions_path, :method => :post) do %>
 		Username:    <%= text_field_tag "email" %>
+		<br clear="all">
 		Password: <%= password_field_tag "password" %>
+		<br clear="all">
 		<%= submit_tag "Sign In" %>
 	<% end %>
 	
