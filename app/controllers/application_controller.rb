@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   def current_user
     return @current_user if defined? @current_user
-    @current_user = User.where("email = ? ANd token = ?",session[:email], session[:password]).first
+    @current_user = User.where("email = ? ANd token = ?", session[:email], session[:password]).first
   end
   
   private

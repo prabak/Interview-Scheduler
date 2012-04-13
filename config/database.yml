@@ -13,7 +13,7 @@ development:
   encoding: utf8
   reconnect: false
   pool: 5
-  database: appointment_development
+  database: interview_scheduler_development
   username: root
   password: 
   host: localhost
@@ -26,7 +26,7 @@ test:
   encoding: utf8
   reconnect: false
   pool: 5
-  database: appointment_test
+  database: interview_scheduler_test
   username: root
   password: 
   host: localhost
@@ -36,7 +36,7 @@ production:
   encoding: utf8
   reconnect: false
   pool: 5
-  database: appointment_production
+  database: interview_scheduler_production
   username: root
   password:
   host: localhost
